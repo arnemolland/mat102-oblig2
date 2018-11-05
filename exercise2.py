@@ -16,7 +16,7 @@ x_plot = np.linspace(0,60, len(y_train))
 # 2a: Det virker som om at dataene passer, hvis man antar
 #     at utetemperaturen faller raskere enn ovnen når målsatt temperatur
 #     + at varmestrålene blir diffusert og svekket før rommet varmes opp.
-
+plt.figure(num='Oppgave 2')
 plt.scatter(x_plot, y_train, color='b', s=30, marker='o', label='Temperaturer')
 colors = ['teal', 'yellowgreen', 'gold',]
 x_plot = x_plot.reshape(-1,1)
@@ -33,6 +33,7 @@ for count, degree in enumerate([1, 2, 3]):
     plt.plot(x_plot, y_plot, color=colors[count], linewidth=2, label='Regresjon av %d.grad' % degree)
 
 plt.legend(loc='lower right')
+plt.title('Regresjon')
 plt.ylabel('Celsius')
 plt.xlabel('Minutter')
 plt.show()
