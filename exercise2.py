@@ -22,7 +22,10 @@ colors = ['teal', 'yellowgreen', 'gold',]
 x_plot = x_plot.reshape(-1,1)
 
 # 2b, 2c: Setter opp linær, kvadratisk og kubisk tilnærming.
-#         Determinasjonskoeffisientene blir printet i konsollen.
+#         Determinasjonskoeffisientene blir også printet i konsollen.
+#         1. grads-koeffisient: a = 0.05989611888616359
+#         2. grads-koeffisienter: a = 0.001751736979763303, b = -0.04519293553391742
+#         3. grads-koeffisienter: a = -3.862609097582497, b = 0.0052254005519444535, c = -0.12643620973798436
 
 for count, degree in enumerate([1, 2, 3]):
     model = make_pipeline(PolynomialFeatures(degree), linear_model.Ridge())
