@@ -84,7 +84,7 @@ x_plot = np.linspace(0,60, len(y_train))
 #     + at varmestrålene blir diffusert og svekket før rommet varmes opp.
 
 plt.figure(num='Oppgave 2')
-plt.scatter(x_plot, y_train, color='b', s=30, marker='o', label='Temperaturer')
+plt.scatter(x_plot, y_train, color='b', s=30, marker='o', label='Målinger')
 colors = ['teal', 'yellowgreen', 'gold',]
 x_plot = x_plot.reshape(-1,1)
 
